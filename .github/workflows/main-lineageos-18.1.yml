@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Build
-        uses: jambokill/kernel_build_action@main
+        uses: jambokill/kernel_build_action@main-lineageos-18.1.yml
         with:
           kernel-url: https://github.com/LineageOS/android_kernel_xiaomi_sm8250
           kernel-branch: lineage-18.1
