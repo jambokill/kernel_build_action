@@ -33,9 +33,9 @@ jobs:
     - name: Build Kernel
       uses: ./
       with:
-          kernel-url: https://github.com/LineageOS/android_kernel_xiaomi_sm8250
+          kernel-url: https://github.com/jambokill/InfiniR_kernel_alioth
           kernel-dir: msm-4.19
-          kernel-branch: lineage-18.1
+          kernel-branch: 11-alioth
           config: vendor/alioth_defconfig
           arch: arm64
           aosp-gcc: true
