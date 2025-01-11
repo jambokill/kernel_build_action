@@ -33,16 +33,16 @@ jobs:
     - name: Build Kernel
       uses: ./
       with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
+          kernel-url: https://github.com/raystef66/InfiniR_kernel_alioth
           kernel-dir: msm-4.19
-          kernel-branch: taffy
-          config: cas_defconfig
+          kernel-branch: c32fd2d2e905cebfa9c5239c05d2ae7aa936ac64
+          config: vendor/alioth_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          ksu: true
+          ksu: false
           ksu-version: main
-          android-version: 12
-          aosp-clang-version: r383902
+          android-version: 11
+          aosp-clang-version: r445002
           disable-lto: true
           anykernel3: true
