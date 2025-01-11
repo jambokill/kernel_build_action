@@ -1,0 +1,22 @@
+name: Build InfiniR 2.28
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build InfiniR 2.28
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build
+        uses: jambokill/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/raystef66/InfiniR_kernel_alioth
+          kernel-branch: c32fd2d2e905cebfa9c5239c05d2ae7aa936ac64
+          config: vendor/alioth_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          android-version: 11
+          aosp-clang-version: r445002
+          python-27: true
