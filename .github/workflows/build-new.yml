@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build Kernel
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build
+        uses: jambokill/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/LineageOS/android_kernel_xiaomi_sm8250
+          kernel-branch: lineage-18.1
+          config: vendor/alioth_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          android-version: 11
+          aosp-clang-version: r445002
