@@ -43,6 +43,6 @@ jobs:
           ksu: false
           ksu-version: main
           android-version: 11
-          aosp-clang-version: r445002
+          aosp-clang-version: r383902
           disable-lto: true
           anykernel3: true
